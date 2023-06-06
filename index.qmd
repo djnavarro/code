@@ -1,0 +1,54 @@
+---
+page-layout: full
+---
+
+::: {.banner}
+
+::: {.centered}
+# Software projects by Danielle Navarro
+:::
+
+:::
+
+
+```{r}
+#| echo: false
+add_card <- function(src, title, text, url, link_text, img_alt) {
+  lines <- c(
+    '<div class="g-col-12 g-col-md-6 g-col-xl-4">',
+    '<div class="card h-100">',
+    paste0(
+      '<a href="', 
+      url, 
+      '"><img src="', 
+      src, 
+      '"',
+      'alt = "',
+      img_alt,
+      '"',
+      'class="card-img-top"></a>'
+    ),
+    '<div class="card-body">',
+    paste0('<h2 class="card-title">', title, '</h2>'),
+    paste0('<p class="card-text">', text, '</p>'),
+    '</div>',
+    '<div class="card-footer">',
+    paste0('<a href="', url, '" class="btn btn-primary">', link_text, '</a>'),
+    '</div>',
+    '</div>',
+    '</div>'
+  )
+  cat(lines, sep="\n")
+}
+```
+
+
+::: {.grid}
+
+```{r}
+#| echo: false
+#| results: asis
+
+```
+
+::: 

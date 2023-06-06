@@ -1,0 +1,31 @@
+/* css styles */
+
+.circular {
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.centered {
+  text-align: center;
+}
+
+.banner {
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.card-body, .card-footer {
+  background-color: #eee;
+}
+
+.card-footer {
+  border: none;
+}
+
+.card-footer > p {
+  margin-bottom: 10px;
+}
+
+h2 {
+  font-size: 1.4rem;
+}
