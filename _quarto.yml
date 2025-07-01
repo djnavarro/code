@@ -4,8 +4,8 @@ project:
 
 website:
   title: "Danielle Navarro"
-  site-url: https://software.djnavarro.net
-  repo-url: https://github.com/djnavarro/software
+  site-url: https://code.djnavarro.net
+  repo-url: https://github.com/djnavarro/code
   open-graph: true
   search: false
   twitter-card:
@@ -29,8 +29,8 @@ website:
           text: More...
   page-footer:
     center:
-      - href: https://software.djnavarro.net
-        text: software.djnavarro.net
+      - href: https://code.djnavarro.net
+        text: code.djnavarro.net
 
 format:
   html:
