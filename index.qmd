@@ -10,8 +10,7 @@ page-layout: full
 
 :::
 
-At various times in my life I have released code I wrote into the wild. Usually on purpose, occasionally by accident, but almost always with my blessings. Sometimes that code is reused by other people. The most widely-used code I have ever written in my life appears in Appendix C to an obscure paper on the computation of first passage to absorbtion times for Weiner diffusion processes. The original manuscript is [here](https://papers.djnavarro.net/2009_firstpassage.pdf) and you need to scroll down to page 19 to find it. The code is written in MATLAB syntax and -- just to make things worse -- there's actually a bug in code. If you take the code at face value it simply doesn't work. Nevertheless, some versions of this code have found their way into an astonishing range of scientific software tools. This one silly little snippet, barely more than a github gist, is in fact the most contagiously viral bit of code I've ever written. But it's not software, right? It doesn't have a github repo, and you can't install it with apt get. It's just... code. And so, with this ambiguity stated up front, here is an incomplete and idiosyncratic list of "weird things Danielle has done with code that have sometimes been used by others". It is a random grab-bag of things I have done with code that others might maybe want to also do with code. No more, no less.
-
+At various times in my life I have released code I wrote into the wild. Usually on purpose, occasionally by accident. Sometimes that code is reused by other people, often unpredictably. Case in point: the most widely-used code I have ever written appears in Appendix C to an obscure paper on the computation of first passage to absorbtion times for Weiner diffusion processes. The original manuscript is [here](https://papers.djnavarro.net/2009_firstpassage.pdf) and you need to scroll down to page 19 to find it. The code is written in MATLAB syntax and -- just to make things worse -- there's a bug in code. If you take the code at face value it simply doesn't work. Nevertheless, some versions of this code have found their way into an astonishing range of scientific software tools. This one silly little snippet, barely more than a github gist, turns out to be the most contagiously viral bit of code I've ever written. But it doesn't have a github repo, it doesn't have a website, and there's no mechanism to invoke it directly. It just happened to be useful, and people used it. With that in mind, here is a incomplete and idiosyncratic list of some things I've done with code. Some of it is good, some of it isn't. Life is like that.
 
 ```{r}
 #| echo: false
@@ -53,11 +52,11 @@ add_card <- function(src, title, text, url, link_text, img_alt) {
 
 add_card(
   src = "img/june_01_3615.png", 
-  title = "BayesERtools", 
+  title = "bayesertools", 
   text = "Tools for Bayesian exposure-response analysis", 
   url = "https://genentech.github.io/BayesERtools/", 
   link_text = "package homepage",
-  img_alt = ""
+  img_alt = "Abstract generative art"
 )
 
 add_card(
@@ -66,16 +65,16 @@ add_card(
   text = "Bayesian Emax regression with Stan", 
   url = "https://yoshidk6.github.io/rstanemax/", 
   link_text = "package homepage",
-  img_alt = ""
+  img_alt = "Abstract generative art"
 )
 
 add_card(
   src = "img/june_05_0539.png", 
-  title = "ggPMX", 
+  title = "ggpmx", 
   text = "Diagnostic plots for pharmacometric models", 
   url = "https://github.com/ggPMXdevelopment/ggPMX", 
   link_text = "github repository",
-  img_alt = ""
+  img_alt = "Abstract generative art"
 )
 
 add_card(
@@ -84,7 +83,7 @@ add_card(
   text = "Syntactic sugar for quarto", 
   url = "https://quartose.djnavarro.net", 
   link_text = "package homepage",
-  img_alt = ""
+  img_alt = "Abstract generative art"
 )
 
 add_card(
@@ -93,7 +92,7 @@ add_card(
   text = "Tools for managing generative art workflows", 
   url = "https://arttools.djnavarro.net", 
   link_text = "package homepage",
-  img_alt = ""
+  img_alt = "Abstract generative art"
 )
 
 add_card(
@@ -102,7 +101,7 @@ add_card(
   text = "A low-quality async tool for R", 
   url = "https://queue.djnavarro.net", 
   link_text = "package homepage",
-  img_alt = ""
+  img_alt = "Abstract generative art"
 )
 
 add_card(
@@ -111,7 +110,7 @@ add_card(
   text = "A fun R package for generative art", 
   url = "https://flametree.djnavarro.net", 
   link_text = "package homepage",
-  img_alt = ""
+  img_alt = "Abstract generative art"
 )
 
 ```
