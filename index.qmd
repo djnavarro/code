@@ -12,30 +12,6 @@ page-layout: full
 
 At various times in my life I have released code I wrote into the wild. Usually on purpose, occasionally by accident, but almost always with my blessings. Sometimes that code is reused by other people. The most widely-used code I have ever written in my life appears in Appendix C to an obscure paper on the computation of first passage to absorbtion times for Weiner diffusion processes. The original manuscript is [here](https://papers.djnavarro.net/2009_firstpassage.pdf) and you need to scroll down to page 19 to find it. The code is written in MATLAB syntax and -- just to make things worse -- there's actually a bug in code. If you take the code at face value it simply doesn't work. Nevertheless, some versions of this code have found their way into an astonishing range of scientific software tools. This one silly little snippet, barely more than a github gist, is in fact the most contagiously viral bit of code I've ever written. But it's not software, right? It doesn't have a github repo, and you can't install it with apt get. It's just... code. And so, with this ambiguity stated up front, here is an incomplete and idiosyncratic list of "weird things Danielle has done with code that have sometimes been used by others". It is a random grab-bag of things I have done with code that others might maybe want to also do with code. No more, no less.
 
-<!--
-The vast majority of these were throwaway projects, use at your own risk!
-
-- [arttools.djnavarro.net](https://arttools.djnavarro.net)
-- [asciify.djnavarro.net](https://asciify.djnavarro.net)
-- [bs4cards.djnavarro.net](https://bs4cards.djnavarro.net)
-- [caladown.djnavarro.net](https://caladown.djnavarro.net)
-- [damage.djnavarro.net](https://damage.djnavarro.net)
-- [flametree.djnavarro.net](https://flametree.djnavarro.net)
-- [jasmines.djnavarro.net](https://jasmines.djnavarro.net)
-- [jaysire.djnavarro.net](https://jaysire.djnavarro.net)
-- [lsr.djnavarro.net](https://lsr.djnavarro.net)
-- [queue.djnavarro.net](https://queue.djnavarro.net)
-- [rainbowr.djnavarro.net](https://rainbowr.djnavarro.net)
-- [refinery.djnavarro.net](https://refinery.djnavarro.net)
-- [scrawl.djnavarro.net](https://scrawl.djnavarro.net)
-- [voronoise.djnavarro.net](https://voronoise.djnavarro.net)
-- [workbch.djnavarro.net](https://workbch.djnavarro.net)
-
--->
-
-## Pharmacometrics tools
-
-## 
 
 ```{r}
 #| echo: false
@@ -74,6 +50,69 @@ add_card <- function(src, title, text, url, link_text, img_alt) {
 ```{r}
 #| echo: false
 #| results: asis
+
+add_card(
+  src = "img/june_01_3615.png", 
+  title = "BayesERtools", 
+  text = "Tools for Bayesian exposure-response analysis", 
+  url = "https://genentech.github.io/BayesERtools/", 
+  link_text = "package homepage",
+  img_alt = ""
+)
+
+add_card(
+  src = "img/june_02_0242.png", 
+  title = "rstanemax", 
+  text = "Bayesian Emax regression with Stan", 
+  url = "https://yoshidk6.github.io/rstanemax/", 
+  link_text = "package homepage",
+  img_alt = ""
+)
+
+add_card(
+  src = "img/june_05_0539.png", 
+  title = "ggPMX", 
+  text = "Diagnostic plots for pharmacometric models", 
+  url = "https://github.com/ggPMXdevelopment/ggPMX", 
+  link_text = "github repository",
+  img_alt = ""
+)
+
+add_card(
+  src = "img/june_03_0324.png", 
+  title = "quartose", 
+  text = "Syntactic sugar for quarto", 
+  url = "https://quartose.djnavarro.net", 
+  link_text = "package homepage",
+  img_alt = ""
+)
+
+add_card(
+  src = "img/june_02_0205.png", 
+  title = "arttools", 
+  text = "Tools for managing generative art workflows", 
+  url = "https://arttools.djnavarro.net", 
+  link_text = "package homepage",
+  img_alt = ""
+)
+
+add_card(
+  src = "img/june_18_1803.png", 
+  title = "queue", 
+  text = "A low-quality async tool for R", 
+  url = "https://queue.djnavarro.net", 
+  link_text = "package homepage",
+  img_alt = ""
+)
+
+add_card(
+  src = "img/june_07_0708.png", 
+  title = "flametree", 
+  text = "A fun R package for generative art", 
+  url = "https://flametree.djnavarro.net", 
+  link_text = "package homepage",
+  img_alt = ""
+)
 
 ```
 
