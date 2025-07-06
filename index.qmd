@@ -10,37 +10,39 @@ page-layout: full
 
 :::
 
-At various times in my life I have released code I wrote into the wild. Usually on purpose, occasionally by accident. Sometimes that code is reused by other people, often unpredictably. Case in point: the most widely-used code I have ever written appears in Appendix C to an obscure paper on the computation of first passage to absorbtion times for Weiner diffusion processes. The original manuscript is [here](https://papers.djnavarro.net/2009_firstpassage.pdf) and you need to scroll down to page 19 to find it. The code is written in MATLAB syntax and -- just to make things worse -- there's a bug in code. If you take the code at face value it simply doesn't work. Nevertheless, some versions of this code have found their way into an astonishing range of scientific software tools. This one silly little snippet, barely more than a github gist, turns out to be the most contagiously viral bit of code I've ever written. But it doesn't have a github repo, it doesn't have a website, and there's no mechanism to invoke it directly. It just happened to be useful, and people used it. With that in mind, here is a incomplete and idiosyncratic list of some things I've done with code. Some of it is good, some of it isn't. Life is like that.
+At various times in my life I have released code into the wild. Usually on purpose, occasionally by accident. Sometimes that code is reused by other people, often unpredictably. Case in point: the most widely-used code I have ever written appears in Appendix C to an obscure paper on the computation of first passage to absorbtion times for Weiner diffusion processes. The original manuscript is [here](https://papers.djnavarro.net/2009_firstpassage.pdf) and you need to scroll down to page 19 to find it. The code is written in MATLAB syntax and -- just to make things worse -- there's a bug in code. If you take the code at face value it simply doesn't work. Nevertheless, some versions of this code have found their way into an astonishing range of scientific software tools. This one silly little snippet, barely more than a github gist, turns out to be the most contagiously viral bit of code I've ever written. But it doesn't have a github repo, it doesn't have a website, and there's no mechanism to invoke it directly. It just happened to be useful, and people used it. With that in mind, here is a incomplete and idiosyncratic list of some things I've done with code. Some of it is good, some of it isn't. Life is like that.
 
 ```{r}
 #| echo: false
-add_card <- function(src, title, text, url, link_text, img_alt) {
+card <- function(title, text, buttons, image) {
   lines <- c(
     '<div class="g-col-12 g-col-md-6 g-col-xl-4">',
     '<div class="card h-100">',
-    paste0(
-      '<a href="', 
-      url, 
-      '"><img src="', 
-      src, 
-      '"',
-      'alt = "',
-      img_alt,
-      '"',
-      'class="card-img-top"></a>'
-    ),
+    image,
     '<div class="card-body">',
     paste0('<h2 class="card-title">', title, '</h2>'),
     paste0('<p class="card-text">', text, '</p>'),
     '</div>',
     '<div class="card-footer">',
-    paste0('<a href="', url, '" class="btn btn-primary">', link_text, '</a>'),
+    unlist(buttons),
     '</div>',
     '</div>',
     '</div>'
   )
   cat(lines, sep="\n")
 }
+
+image <- function(src, url, alt) {
+  paste0(
+    '<a href="', url, '"><img src="', src, '"', 'alt = "', alt, '"', 'class="card-img-top"></a>'
+  )
+}
+
+button <- function(url, text) {
+  paste0('<a href="', url, '" class="btn btn-primary">', text, '</a>')
+}
+
+
 ```
 
 
@@ -50,69 +52,123 @@ add_card <- function(src, title, text, url, link_text, img_alt) {
 #| echo: false
 #| results: asis
 
-add_card(
-  src = "img/june_01_3615.png", 
+card(
   title = "bayesertools", 
-  text = "Tools for Bayesian exposure-response analysis", 
-  url = "https://genentech.github.io/BayesERtools/", 
-  link_text = "package homepage",
-  img_alt = "Abstract generative art"
+  text = "Tools for Bayesian exposure-response analysis. Kenta Yoshida at Genetech is the primary developer, but I contribute frequently to this one.", 
+  buttons = list(
+    button("https://genentech.github.io/BayesERtools/", "docs"),
+    button("https://github.com/genentech/BayesERtools", "repo"),
+    button("https://cran.r-project.org/package=BayesERtools", "cran")
+  ),
+  image = image(
+    src = "img/june_01_3615.png", 
+    url = "https://genentech.github.io/BayesERtools/", 
+    alt = "Abstract generative art"
+  )
 )
 
-add_card(
-  src = "img/june_02_0242.png", 
+card(
   title = "rstanemax", 
-  text = "Bayesian Emax regression with Stan", 
-  url = "https://yoshidk6.github.io/rstanemax/", 
-  link_text = "package homepage",
-  img_alt = "Abstract generative art"
+  text = "Bayesian Emax regression with Stan. Again, Kenta Yoshida at Genetech is the primary developer, though I contribute to it a lot.", 
+  buttons = list(
+    button("https://yoshidk6.github.io/rstanemax/", "docs"),
+    button("https://github.com/yoshidk6/rstanemax/", "repo"),
+    button("https://cran.r-project.org/package=rstanemax", "cran")
+  ), 
+  image = image(
+    src = "img/june_02_0242.png", 
+    url = "https://yoshidk6.github.io/rstanemax/", 
+    alt = "Abstract generative art"
+  )
 )
 
-add_card(
-  src = "img/june_05_0539.png", 
+card(
   title = "ggpmx", 
-  text = "Diagnostic plots for pharmacometric models", 
-  url = "https://github.com/ggPMXdevelopment/ggPMX", 
-  link_text = "github repository",
-  img_alt = "Abstract generative art"
+  text = "Diagnostic plots for pharmacometric models. I've made some contribution to this work, but this package has a great many contributors, and it is mostly coordinated through the folks at Novartis.", 
+  buttons = list(
+    button("https://github.com/ggPMXdevelopment/ggPMX", "repo"),
+    button("https://cran.r-project.org/package=ggPMX", "cran")   
+  ),
+  image = image(
+    src = "img/june_05_0539.png", 
+    url = "https://github.com/ggPMXdevelopment/ggPMX", 
+    alt = "Abstract generative art"
+  )
 )
 
-add_card(
-  src = "img/june_03_0324.png", 
+card(
   title = "quartose", 
-  text = "Syntactic sugar for quarto", 
-  url = "https://quartose.djnavarro.net", 
-  link_text = "package homepage",
-  img_alt = "Abstract generative art"
+  text = "Syntactic sugar for quarto. An early-stage package providing some tools for working with quarto programmatically. It was originally a personal-use package, but people have expressed some interest in using it so I may send it to CRAN.",
+  buttons = list(
+    button("https://quartose.djnavarro.net", "docs"),
+    button("https://github.com/djnavarro/quartose", "repo")
+  ),
+  image = image(
+    src = "img/june_03_0324.png", 
+    url = "https://quartose.djnavarro.net", 
+    alt = "Abstract generative art"
+  )
 )
 
-add_card(
-  src = "img/june_02_0205.png", 
+card(
+  title = "calendario", 
+  text = "A personal package I use to help me manage my workload. It's quirky and unashamedly hyperfocused on what I need. I'm going through the motions of building a proper test suite, writing real documentation, etc, but I see no need to send it to CRAN.",
+  buttons = list(
+    button("https://calendario.djnavarro.net", "docs"),
+    button("https://github.com/djnavarro/calendario/", "repo")
+  ),
+  image = image(
+    src = "img/june_04_0462.png", 
+    url = "https://calendario.djnavarro.net", 
+    alt = "Abstract generative art"
+  )
+)
+
+card(
   title = "arttools", 
-  text = "Tools for managing generative art workflows", 
-  url = "https://arttools.djnavarro.net", 
-  link_text = "package homepage",
-  img_alt = "Abstract generative art"
+  text = "Tools for managing generative art workflows. Again, this one is very much designed around my own needs. It's reasonably well documented and other folks are free to use it, but it's not intended for CRAN.", 
+  buttons = list(
+    button("https://arttools.djnavarro.net", "docs"),
+    button("https://github.com/djnavarro/arttools/", "repo")
+  ), 
+  image = image(
+    src = "img/june_02_0205.png", 
+    url = "https://arttools.djnavarro.net", 
+    alt = "Abstract generative art"
+  )
 )
 
-add_card(
-  src = "img/june_18_1803.png", 
+card(
   title = "queue", 
-  text = "A low-quality async tool for R", 
-  url = "https://queue.djnavarro.net", 
-  link_text = "package homepage",
-  img_alt = "Abstract generative art"
+  text = "Another odd side-project. It's essentially a tool for multithreading in R using callr and R6, and I quite enjoyed writing it, but if you are seriously in need of this functionality there are much better tools for this and you shouldn't rely on my toy project.", 
+  buttons = list(
+    button("https://queue.djnavarro.net", "docs"),
+    button("https://github.com/djnavarro/queue/", "repo")
+  ),
+  image = image(
+    src = "img/june_18_1803.png", 
+    url = "https://queue.djnavarro.net",
+    alt = "Abstract generative art"
+  )
 )
 
-add_card(
-  src = "img/june_07_0708.png", 
+card(
   title = "flametree", 
-  text = "A fun R package for generative art", 
-  url = "https://flametree.djnavarro.net", 
-  link_text = "package homepage",
-  img_alt = "Abstract generative art"
+  text = "A fun R package for generative art. It makes cute little cartoon trees using iterated function systems. That's all it does, but I like it.", 
+  buttons = list(
+    button("https://flametree.djnavarro.net", "docs"),
+    button("https://github.com/djnavarro/flametree/", "repo"),
+    button("https://cran.r-project.org/package=flametree", "cran")
+  ),
+  image = image(
+    src = "img/june_07_0708.png", 
+    url = "https://flametree.djnavarro.net", 
+    alt = "Abstract generative art"
+  )
 )
+
 
 ```
+
 
 ::: 
