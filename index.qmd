@@ -167,6 +167,20 @@ card(
   )
 )
 
+card(
+  title = "lsr", 
+  text = "The first R package I ever wrote, designed to suport a statistics textbook that I'm no longer in a position to maintain. The code in this package is extremely poorly written and I'm a little embarrassed by it, but surprisingly it still seems to work as intended. So that's something.", 
+  buttons = list(
+    button("https://lsr.djnavarro.net", "docs"),
+    button("https://github.com/djnavarro/lsr/", "repo"),
+    button("https://cran.r-project.org/package=lsr", "cran")
+  ),
+  image = image(
+    src = "img/june_18_1808.png", 
+    url = "https://lsr.djnavarro.net", 
+    alt = "Abstract generative art"
+  )
+)
 
 ```
 
