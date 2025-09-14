@@ -32,7 +32,8 @@ card <- function(title, text, buttons, image) {
   cat(lines, sep="\n")
 }
 
-image <- function(src, url, alt) {
+image <- function(src, url, alt, make = TRUE) {
+  if (make) make_image(src)
   paste0(
     '<a href="', url, '"><img src="', src, '"', 'alt = "', alt, '"', 'class="card-img-top"></a>'
   )
@@ -42,7 +43,48 @@ button <- function(url, text) {
   paste0('<a href="', url, '" class="btn btn-primary">', text, '</a>')
 }
 
+text_seed <- function(x) {
+  sum(as.integer(charToRaw(x)))
+}
 
+cosine_palette <- function(n, base = NULL, seed = NULL) {
+  if (!is.null(seed)) set.seed(seed)
+  if (is.null(base)) base <- colors(distinct = TRUE)
+  a <- c(0.5, 0.5, 0.5)
+  b <- (sample(base, 1) |> col2rgb() |> as.vector()) / 255
+  c <- (sample(base, 1) |> col2rgb() |> as.vector()) / 255
+  d <- (sample(base, 1) |> col2rgb() |> as.vector()) / 255
+  pal <- vapply(
+    seq(0, 1, length.out = n), 
+    function(t) a + b * cos(2 * pi * (c * t + d)), 
+    double(3)
+  )
+  pal[pal > 1] <- 1
+  rgb(t(abs(pal)))
+}
+
+shade_strip <- function(cols) {
+  withr::with_par(
+    list(mar = c(0,0,0,0)),
+    graphics::image(
+      matrix(seq_along(cols), ncol = 1), 
+      col = cols,
+      axes = FALSE
+    )
+  )
+}
+
+make_image <- function(src) {
+  pal <- cosine_palette(n = 256, seed = text_seed(src))
+  png(
+    filename = src,
+    width = 400,
+    height = 6,
+    units = "px"
+  )
+  shade_strip(pal)
+  dev.off()
+}
 ```
 
 
@@ -61,7 +103,7 @@ card(
     button("https://cran.r-project.org/package=BayesERtools", "cran")
   ),
   image = image(
-    src = "img/june_01_3615.png", 
+    src = "img/bayesertools.png", 
     url = "https://genentech.github.io/BayesERtools/", 
     alt = "Abstract generative art"
   )
@@ -76,7 +118,7 @@ card(
     button("https://cran.r-project.org/package=rstanemax", "cran")
   ), 
   image = image(
-    src = "img/june_02_0242.png", 
+    src = "img/rstanemax.png", 
     url = "https://yoshidk6.github.io/rstanemax/", 
     alt = "Abstract generative art"
   )
@@ -90,7 +132,7 @@ card(
     button("https://cran.r-project.org/package=ggPMX", "cran")   
   ),
   image = image(
-    src = "img/june_05_0539.png", 
+    src = "img/ggpmx.png", 
     url = "https://github.com/ggPMXdevelopment/ggPMX", 
     alt = "Abstract generative art"
   )
@@ -104,7 +146,7 @@ card(
     button("https://github.com/djnavarro/quartose", "repo")
   ),
   image = image(
-    src = "img/june_03_0324.png", 
+    src = "img/quartose.png", 
     url = "https://quartose.djnavarro.net", 
     alt = "Abstract generative art"
   )
@@ -118,7 +160,7 @@ card(
     button("https://github.com/djnavarro/calendario/", "repo")
   ),
   image = image(
-    src = "img/june_04_0462.png", 
+    src = "img/calendario.png", 
     url = "https://calendario.djnavarro.net", 
     alt = "Abstract generative art"
   )
@@ -132,7 +174,7 @@ card(
     button("https://github.com/djnavarro/arttools/", "repo")
   ), 
   image = image(
-    src = "img/june_02_0205.png", 
+    src = "img/arttools.png", 
     url = "https://arttools.djnavarro.net", 
     alt = "Abstract generative art"
   )
@@ -146,7 +188,7 @@ card(
     button("https://github.com/djnavarro/queue/", "repo")
   ),
   image = image(
-    src = "img/june_18_1803.png", 
+    src = "img/queue.png", 
     url = "https://queue.djnavarro.net",
     alt = "Abstract generative art"
   )
@@ -161,7 +203,7 @@ card(
     button("https://cran.r-project.org/package=flametree", "cran")
   ),
   image = image(
-    src = "img/june_07_0708.png", 
+    src = "img/flametree.png", 
     url = "https://flametree.djnavarro.net", 
     alt = "Abstract generative art"
   )
@@ -176,7 +218,7 @@ card(
     button("https://cran.r-project.org/package=lsr", "cran")
   ),
   image = image(
-    src = "img/june_18_1808.png", 
+    src = "img/lsr.png", 
     url = "https://lsr.djnavarro.net", 
     alt = "Abstract generative art"
   )
@@ -184,5 +226,5 @@ card(
 
 ```
 
-
 ::: 
+

@@ -23,6 +23,10 @@
   margin-bottom: 10px;
 }
 
+img {
+  vertical-align: top !important;
+}
+
 h2 {
   font-size: 1.4rem;
 }
