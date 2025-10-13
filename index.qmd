@@ -157,7 +157,8 @@ card(
   text = "Syntactic sugar for quarto. An early-stage package providing some tools for working with quarto programmatically. It was originally a personal-use package, but people have expressed some interest in using it so I may send it to CRAN.",
   buttons = list(
     button("https://quartose.djnavarro.net", "docs"),
-    button("https://github.com/djnavarro/quartose", "repo")
+    button("https://github.com/djnavarro/quartose", "repo"),
+    button("https://cran.r-project.org/package=quartose", "cran")
   ),
   image = image(
     src = "img/quartose.png", 
