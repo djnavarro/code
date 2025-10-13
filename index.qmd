@@ -154,7 +154,7 @@ card(
 
 card(
   title = "quartose", 
-  text = "Syntactic sugar for quarto. An early-stage package providing some tools for working with quarto programmatically. It was originally a personal-use package, but people have expressed some interest in using it so I may send it to CRAN.",
+  text = "Syntactic sugar for quarto. An early-stage package providing some tools for working with quarto programmatically. It was originally a personal-use package, but people have expressed some interest in using it so I've now sent it to CRAN. I like this one enough that I intend to maintain it properly, but I suspect development will be slow given life constraints.",
   buttons = list(
     button("https://quartose.djnavarro.net", "docs"),
     button("https://github.com/djnavarro/quartose", "repo"),
@@ -169,7 +169,7 @@ card(
 
 card(
   title = "calendario", 
-  text = "A personal package I use to help me manage my workload. It's quirky and unashamedly hyperfocused on what I need. I'm going through the motions of building a proper test suite, writing real documentation, etc, but I see no need to send it to CRAN.",
+  text = "A personal package I use to help me manage my workload. It's quirky, horrifically buggy, and unashamedly hyperfocused on what I need. I'm going through the motions of building a proper test suite, writing real documentation, etc, but I see no need to send it to CRAN. The last thing I want is other people trying to use this one.",
   buttons = list(
     button("https://calendario.djnavarro.net", "docs"),
     button("https://github.com/djnavarro/calendario/", "repo")
@@ -197,7 +197,7 @@ card(
 
 card(
   title = "queue", 
-  text = "Another odd side-project. It's essentially a tool for multithreading in R using callr and R6, and I quite enjoyed writing it, but if you are seriously in need of this functionality there are much better tools for this and you shouldn't rely on my toy project.", 
+  text = "Another odd side-project. It's essentially a tool for multithreading in R using [callr](https://callr.r-lib.org/) and [R6](https://r6.r-lib.org/). I quite enjoyed writing it, but if you are seriously in need of this functionality there are **much** better tools for this. You shouldn't rely on my toy project.", 
   buttons = list(
     button("https://queue.djnavarro.net", "docs"),
     button("https://github.com/djnavarro/queue/", "repo")
@@ -211,7 +211,7 @@ card(
 
 card(
   title = "flametree", 
-  text = "A fun R package for generative art. It makes cute little cartoon trees using iterated function systems. That's all it does, but I like it.", 
+  text = "A fun R package for generative art. It makes cute little cartoon trees using iterated function systems. That's all it does, but I like it. In retrospect I don't know why I sent it to CRAN but... it's there and it's not creating problems so... cool.", 
   buttons = list(
     button("https://flametree.djnavarro.net", "docs"),
     button("https://github.com/djnavarro/flametree/", "repo"),
@@ -226,7 +226,7 @@ card(
 
 card(
   title = "lsr", 
-  text = "The first R package I ever wrote, designed to suport a statistics textbook that I'm no longer in a position to maintain. The code in this package is extremely poorly written and I'm a little embarrassed by it, but surprisingly it still seems to work as intended. So that's something.", 
+  text = "The first R package I ever wrote, designed to suport a [statistics textbook](https://learningstatisticswithr.com/) that I'm no longer in a position to maintain. The code in this package is poorly written and I'm a little embarrassed by it, but surprisingly it still seems to work as intended. So that's something.", 
   buttons = list(
     button("https://lsr.djnavarro.net", "docs"),
     button("https://github.com/djnavarro/lsr/", "repo"),
