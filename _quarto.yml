@@ -13,7 +13,6 @@ website:
     card-style: summary_large_image
   navbar:
     title: false
-    background: "#eee"
     right:
       - text: Sites
         menu:
