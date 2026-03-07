@@ -98,7 +98,7 @@ make_image <- function(src) {
 
 card(
   title = "sessioncheck", 
-  text = "Simple tools for checking the state of the R session. Very early-stage package (not on CRAN), intended as a drop-in replacement for the heuristic method of using `rm()` to clear the global environment at the top of a script; aimed at intermediate-level R users that may not be ready for advanced session management tools", 
+  text = "Simple tools for checking the state of the R session. Early-stage package, intended as a drop-in replacement for the heuristic method of using `rm()` to clear the global environment at the top of a script; aimed at intermediate-level R users that may not be ready for advanced session management tools", 
   buttons = list(
     button("https://sessioncheck.djnavarro.net/", "docs"),
     button("https://github.com/djnavarro/sessioncheck", "repo")
