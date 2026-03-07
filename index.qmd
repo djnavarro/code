@@ -101,7 +101,8 @@ card(
   text = "Simple tools for checking the state of the R session. Early-stage package, intended as a drop-in replacement for the heuristic method of using `rm()` to clear the global environment at the top of a script; aimed at intermediate-level R users that may not be ready for advanced session management tools", 
   buttons = list(
     button("https://sessioncheck.djnavarro.net/", "docs"),
-    button("https://github.com/djnavarro/sessioncheck", "repo")
+    button("https://github.com/djnavarro/sessioncheck", "repo"),
+    button("https://cran.r-project.org/package=sessioncheck", "cran")
   ),
   image = image(
     src = "img/sessioncheck.png", 
