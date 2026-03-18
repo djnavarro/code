@@ -16,13 +16,21 @@ At various times in my life I have released code into the wild, usually on purpo
 
 ```{r}
 #| echo: false
-card <- function(title, text, buttons, image) {
+card <- function(title, text, buttons, image, url = NULL) {
+  if (is.null(url)) {
+    title_html <- paste0('<h2 class="card-title">', title, '</h2>')
+  } else {
+    title_html <- paste0(
+      '<h2 class="card-title"><a href="', url, '">', 
+      title, '</a></h2>'
+    )
+  }
   lines <- c(
     '<div class="g-col-12 g-col-md-6 g-col-xl-4">',
     '<div class="card h-100">',
     image,
     '<div class="card-body">',
-    paste0('<h2 class="card-title">', title, '</h2>'),
+    title_html,
     paste0('<p class="card-text">', text, '</p>'),
     '</div>',
     '<div class="card-footer">',
@@ -106,9 +114,10 @@ card(
   ),
   image = image(
     src = "img/sessioncheck.png", 
-    url = "https://sessioncheck.djnavarro.net/", 
+    url = "https://sessioncheck.djnavarro.net/",
     alt = "Abstract generative art"
-  )
+  ),
+  url = "https://sessioncheck.djnavarro.net/"
 )
 
 card(
@@ -118,6 +127,7 @@ card(
     button("https://emaxnls.djnavarro.net/", "docs"),
     button("https://github.com/djnavarro/emaxnls", "repo")
   ),
+  url = "https://emaxnls.djnavarro.net/", 
   image = image(
     src = "img/emaxnls.png", 
     url = "https://emaxnls.djnavarro.net/", 
@@ -134,9 +144,10 @@ card(
     button("https://github.com/genentech/BayesERtools", "repo"),
     button("https://cran.r-project.org/package=BayesERtools", "cran")
   ),
+  url = "https://genentech.github.io/BayesERtools/",
   image = image(
     src = "img/bayesertools.png", 
-    url = "https://genentech.github.io/BayesERtools/", 
+    url = "https://genentech.github.io/BayesERtools/",
     alt = "Abstract generative art"
   )
 )
@@ -149,9 +160,10 @@ card(
     button("https://github.com/yoshidk6/rstanemax/", "repo"),
     button("https://cran.r-project.org/package=rstanemax", "cran")
   ), 
+  url = "https://yoshidk6.github.io/rstanemax/",
   image = image(
     src = "img/rstanemax.png", 
-    url = "https://yoshidk6.github.io/rstanemax/", 
+    url = "https://yoshidk6.github.io/rstanemax/",
     alt = "Abstract generative art"
   )
 )
@@ -163,6 +175,7 @@ card(
     button("https://github.com/ggPMXdevelopment/ggPMX", "repo"),
     button("https://cran.r-project.org/package=ggPMX", "cran")   
   ),
+  url = "https://github.com/ggPMXdevelopment/ggPMX", 
   image = image(
     src = "img/ggpmx.png", 
     url = "https://github.com/ggPMXdevelopment/ggPMX", 
@@ -178,6 +191,7 @@ card(
     button("https://github.com/djnavarro/quartose", "repo"),
     button("https://cran.r-project.org/package=quartose", "cran")
   ),
+  url = "https://quartose.djnavarro.net", 
   image = image(
     src = "img/quartose.png", 
     url = "https://quartose.djnavarro.net", 
@@ -192,9 +206,10 @@ card(
     button("https://calendario.djnavarro.net", "docs"),
     button("https://github.com/djnavarro/calendario/", "repo")
   ),
+  url = "https://calendario.djnavarro.net",
   image = image(
     src = "img/calendario.png", 
-    url = "https://calendario.djnavarro.net", 
+    url = "https://calendario.djnavarro.net",
     alt = "Abstract generative art"
   )
 )
@@ -206,6 +221,7 @@ card(
     button("https://arttools.djnavarro.net", "docs"),
     button("https://github.com/djnavarro/arttools/", "repo")
   ), 
+  url = "https://arttools.djnavarro.net", 
   image = image(
     src = "img/arttools.png", 
     url = "https://arttools.djnavarro.net", 
@@ -220,6 +236,7 @@ card(
     button("https://queue.djnavarro.net", "docs"),
     button("https://github.com/djnavarro/queue/", "repo")
   ),
+  url = "https://queue.djnavarro.net",
   image = image(
     src = "img/queue.png", 
     url = "https://queue.djnavarro.net",
@@ -235,6 +252,7 @@ card(
     button("https://github.com/djnavarro/flametree/", "repo"),
     button("https://cran.r-project.org/package=flametree", "cran")
   ),
+  url = "https://flametree.djnavarro.net", 
   image = image(
     src = "img/flametree.png", 
     url = "https://flametree.djnavarro.net", 
@@ -250,6 +268,7 @@ card(
     button("https://github.com/djnavarro/lsr/", "repo"),
     button("https://cran.r-project.org/package=lsr", "cran")
   ),
+  url = "https://lsr.djnavarro.net", 
   image = image(
     src = "img/lsr.png", 
     url = "https://lsr.djnavarro.net", 
