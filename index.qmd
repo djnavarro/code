@@ -105,6 +105,21 @@ make_image <- function(src) {
 #| results: asis
 
 card(
+  title = "erlr", 
+  text = "Work in progress package that provides tools for exposure-response logistic regression analyses", 
+  buttons = list(
+    button("https://erlr.djnavarro.net/", "docs"),
+    button("https://github.com/djnavarro/erlr", "repo")
+  ),
+  image = image(
+    src = "img/erlr.png", 
+    url = "https://erlr.djnavarro.net/",
+    alt = "Abstract generative art"
+  ),
+  url = "https://sessioncheck.djnavarro.net/"
+)
+
+card(
   title = "sessioncheck", 
   text = "Simple tools for checking the state of the R session. Early-stage package, intended as a drop-in replacement for the heuristic method of using `rm()` to clear the global environment at the top of a script; aimed at intermediate-level R users that may not be ready for advanced session management tools", 
   buttons = list(
@@ -134,7 +149,6 @@ card(
     alt = "Abstract generative art"
   )
 )
-
 
 card(
   title = "bayesertools", 
