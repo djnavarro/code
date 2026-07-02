@@ -137,10 +137,11 @@ card(
 
 card(
   title = "emaxnls", 
-  text = "Inspired by the BayesERtools and rstanemax packages I've worked on with Kenta Yoshida, I started thinking about what a lightweight frequentist (yes, frequentist. sue me) tool for Emax regression in R would look like. It would be an act of utter madness to use this package in its current form, but I love the idea enough that I'm listing it on this page anyway", 
+  text = "Inspired by the BayesERtools and rstanemax packages I've worked on with Kenta Yoshida, I started thinking about what a lightweight frequentist (yes, frequentist. sue me) tool for Emax regression in R would look like. This was what happened.", 
   buttons = list(
     button("https://emaxnls.djnavarro.net/", "docs"),
-    button("https://github.com/djnavarro/emaxnls", "repo")
+    button("https://github.com/djnavarro/emaxnls", "repo"),
+    button("https://cran.r-project.org/package=emaxnls", "cran")
   ),
   url = "https://emaxnls.djnavarro.net/", 
   image = image(
