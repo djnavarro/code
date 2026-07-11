@@ -277,7 +277,7 @@ card(
 
 card(
   title = "lsr", 
-  text = "The first R package I ever wrote, designed to suport a [statistics textbook](https://learningstatisticswithr.com/) that I'm no longer in a position to maintain. The code in this package is poorly written and I'm a little embarrassed by it, but surprisingly it still seems to work as intended. So that's something.", 
+  text = "The first R package I ever wrote, designed to suport a [statistics textbook](https://learningstatisticswithr.com/) that a little outdated. Surprisingly it all still seems to work as intended. So that's something.", 
   buttons = list(
     button("https://lsr.djnavarro.net", "docs"),
     button("https://github.com/djnavarro/lsr/", "repo"),
