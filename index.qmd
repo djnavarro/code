@@ -214,20 +214,20 @@ card(
   )
 )
 
-card(
-  title = "calendario", 
-  text = "A personal package I use to help me manage my workload. It's quirky, horrifically buggy, and unashamedly hyperfocused on what I need. I'm going through the motions of building a proper test suite, writing real documentation, etc, but I see no need to send it to CRAN. The last thing I want is other people trying to use this one.",
-  buttons = list(
-    button("https://calendario.djnavarro.net", "docs"),
-    button("https://github.com/djnavarro/calendario/", "repo")
-  ),
-  url = "https://calendario.djnavarro.net",
-  image = image(
-    src = "img/calendario.png", 
-    url = "https://calendario.djnavarro.net",
-    alt = "Abstract generative art"
-  )
-)
+# card(
+#   title = "calendario", 
+#   text = "A personal package I use to help me manage my workload. It's quirky, horrifically buggy, and unashamedly hyperfocused on what I need. I'm going through the motions of building a proper test suite, writing real documentation, etc, but I see no need to send it to CRAN. The last thing I want is other people trying to use this one.",
+#   buttons = list(
+#     button("https://calendario.djnavarro.net", "docs"),
+#     button("https://github.com/djnavarro/calendario/", "repo")
+#   ),
+#   url = "https://calendario.djnavarro.net",
+#   image = image(
+#     src = "img/calendario.png", 
+#     url = "https://calendario.djnavarro.net",
+#     alt = "Abstract generative art"
+#   )
+# )
 
 card(
   title = "arttools", 
