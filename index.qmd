@@ -104,35 +104,35 @@ make_image <- function(src) {
 #| echo: false
 #| results: asis
 
+
 card(
-  title = "erlr", 
-  text = "Work in progress package that provides tools for exposure-response logistic regression analyses", 
+  title = "erplots", 
+  text = "Work in progress package that provides a model agnostic plotting framework for exposure-response plots", 
   buttons = list(
-    button("https://erlr.djnavarro.net/", "docs"),
-    button("https://github.com/djnavarro/erlr", "repo")
+    button("https://erlots.djnavarro.net/", "docs"),
+    button("https://github.com/djnavarro/erplots", "repo")
   ),
   image = image(
-    src = "img/erlr.png", 
-    url = "https://erlr.djnavarro.net/",
+    src = "img/erplots.png", 
+    url = "https://erplots.djnavarro.net/",
     alt = "Abstract generative art"
   ),
-  url = "https://sessioncheck.djnavarro.net/"
+  url = "https://erplots.djnavarro.net/"
 )
 
 card(
-  title = "sessioncheck", 
-  text = "Simple tools for checking the state of the R session. Early-stage package, intended as a drop-in replacement for the heuristic method of using `rm()` to clear the global environment at the top of a script; aimed at intermediate-level R users that may not be ready for advanced session management tools", 
+  title = "erglm", 
+  text = "Work in progress package that provides a convenience layer for exposure-response models that fall within the generalized linear model", 
   buttons = list(
-    button("https://sessioncheck.djnavarro.net/", "docs"),
-    button("https://github.com/djnavarro/sessioncheck", "repo"),
-    button("https://cran.r-project.org/package=sessioncheck", "cran")
+    button("https://erglm.djnavarro.net/", "docs"),
+    button("https://github.com/djnavarro/erglm", "repo")
   ),
   image = image(
-    src = "img/sessioncheck.png", 
-    url = "https://sessioncheck.djnavarro.net/",
+    src = "img/erglm.png", 
+    url = "https://erglm.djnavarro.net/",
     alt = "Abstract generative art"
   ),
-  url = "https://sessioncheck.djnavarro.net/"
+  url = "https://erglm.djnavarro.net/"
 )
 
 card(
@@ -152,51 +152,68 @@ card(
 )
 
 card(
-  title = "bayesertools", 
-  text = "Tools for Bayesian exposure-response analysis. Kenta Yoshida at Genetech is the primary developer, but I contribute frequently to this one.", 
+  title = "sessioncheck", 
+  text = "Simple tools for checking the state of the R session. Early-stage package, intended as a drop-in replacement for the heuristic method of using `rm()` to clear the global environment at the top of a script; aimed at intermediate-level R users that may not be ready for advanced session management tools", 
   buttons = list(
-    button("https://genentech.github.io/BayesERtools/", "docs"),
-    button("https://github.com/genentech/BayesERtools", "repo"),
-    button("https://cran.r-project.org/package=BayesERtools", "cran")
+    button("https://sessioncheck.djnavarro.net/", "docs"),
+    button("https://github.com/djnavarro/sessioncheck", "repo"),
+    button("https://cran.r-project.org/package=sessioncheck", "cran")
   ),
-  url = "https://genentech.github.io/BayesERtools/",
   image = image(
-    src = "img/bayesertools.png", 
-    url = "https://genentech.github.io/BayesERtools/",
+    src = "img/sessioncheck.png", 
+    url = "https://sessioncheck.djnavarro.net/",
     alt = "Abstract generative art"
-  )
+  ),
+  url = "https://sessioncheck.djnavarro.net/"
 )
 
-card(
-  title = "rstanemax", 
-  text = "Bayesian Emax regression with Stan. Again, Kenta Yoshida at Genetech is the primary developer, though I contribute to it a lot.", 
-  buttons = list(
-    button("https://yoshidk6.github.io/rstanemax/", "docs"),
-    button("https://github.com/yoshidk6/rstanemax/", "repo"),
-    button("https://cran.r-project.org/package=rstanemax", "cran")
-  ), 
-  url = "https://yoshidk6.github.io/rstanemax/",
-  image = image(
-    src = "img/rstanemax.png", 
-    url = "https://yoshidk6.github.io/rstanemax/",
-    alt = "Abstract generative art"
-  )
-)
 
-card(
-  title = "ggpmx", 
-  text = "Diagnostic plots for pharmacometric models. I've made some contribution to this work, but this package has a great many contributors, and it is mostly coordinated through the folks at Novartis.", 
-  buttons = list(
-    button("https://github.com/ggPMXdevelopment/ggPMX", "repo"),
-    button("https://cran.r-project.org/package=ggPMX", "cran")   
-  ),
-  url = "https://github.com/ggPMXdevelopment/ggPMX", 
-  image = image(
-    src = "img/ggpmx.png", 
-    url = "https://github.com/ggPMXdevelopment/ggPMX", 
-    alt = "Abstract generative art"
-  )
-)
+# card(
+#   title = "bayesertools", 
+#   text = "Tools for Bayesian exposure-response analysis. Kenta Yoshida at Genetech is the primary developer, but I contribute frequently to this one.", 
+#   buttons = list(
+#     button("https://genentech.github.io/BayesERtools/", "docs"),
+#     button("https://github.com/genentech/BayesERtools", "repo"),
+#     button("https://cran.r-project.org/package=BayesERtools", "cran")
+#   ),
+#   url = "https://genentech.github.io/BayesERtools/",
+#   image = image(
+#     src = "img/bayesertools.png", 
+#     url = "https://genentech.github.io/BayesERtools/",
+#     alt = "Abstract generative art"
+#   )
+# )
+
+# card(
+#   title = "rstanemax", 
+#   text = "Bayesian Emax regression with Stan. Again, Kenta Yoshida at Genetech is the primary developer, though I contribute to it a lot.", 
+#   buttons = list(
+#     button("https://yoshidk6.github.io/rstanemax/", "docs"),
+#     button("https://github.com/yoshidk6/rstanemax/", "repo"),
+#     button("https://cran.r-project.org/package=rstanemax", "cran")
+#   ), 
+#   url = "https://yoshidk6.github.io/rstanemax/",
+#   image = image(
+#     src = "img/rstanemax.png", 
+#     url = "https://yoshidk6.github.io/rstanemax/",
+#     alt = "Abstract generative art"
+#   )
+# )
+
+# card(
+#   title = "ggpmx", 
+#   text = "Diagnostic plots for pharmacometric models. I've made some contribution to this work, but this package has a great many contributors, and it is mostly coordinated through the folks at Novartis.", 
+#   buttons = list(
+#     button("https://github.com/ggPMXdevelopment/ggPMX", "repo"),
+#     button("https://cran.r-project.org/package=ggPMX", "cran")   
+#   ),
+#   url = "https://github.com/ggPMXdevelopment/ggPMX", 
+#   image = image(
+#     src = "img/ggpmx.png", 
+#     url = "https://github.com/ggPMXdevelopment/ggPMX", 
+#     alt = "Abstract generative art"
+#   )
+# )
 
 card(
   title = "quartose", 
