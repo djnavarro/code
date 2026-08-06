@@ -104,6 +104,20 @@ make_image <- function(src) {
 #| echo: false
 #| results: asis
 
+card(
+  title = "ertte", 
+  text = "Work in progress package that provides a convenience layer for exposure-response time-to-event models", 
+  buttons = list(
+    button("https://ertte.djnavarro.net/", "docs"),
+    button("https://github.com/djnavarro/ertte", "repo")
+  ),
+  image = image(
+    src = "img/ertte.png", 
+    url = "https://ertte.djnavarro.net/",
+    alt = "Abstract generative art"
+  ),
+  url = "https://ertte.djnavarro.net/"
+)
 
 card(
   title = "erplots", 
