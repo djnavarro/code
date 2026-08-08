@@ -139,7 +139,8 @@ card(
   text = "Work in progress package that provides a convenience layer for exposure-response models that fall within the generalized linear model", 
   buttons = list(
     button("https://erglm.djnavarro.net/", "docs"),
-    button("https://github.com/djnavarro/erglm", "repo")
+    button("https://github.com/djnavarro/erglm", "repo"),
+    button("https://cran.r-project.org/package=erglm", "cran")
   ),
   image = image(
     src = "img/erglm.png", 
