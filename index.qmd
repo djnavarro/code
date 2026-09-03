@@ -136,7 +136,7 @@ card(
 
 card(
   title = "erglm", 
-  text = "Work in progress package that provides a convenience layer for exposure-response models that fall within the generalized linear model", 
+  text = "A small package to provide a convenience layer for exposure-response models that fall within the generalized linear model, and hooks into the erplots package", 
   buttons = list(
     button("https://erglm.djnavarro.net/", "docs"),
     button("https://github.com/djnavarro/erglm", "repo"),
@@ -152,7 +152,7 @@ card(
 
 card(
   title = "emaxnls", 
-  text = "Inspired by the BayesERtools and rstanemax packages I've worked on with Kenta Yoshida, I started thinking about what a lightweight frequentist (yes, frequentist. sue me) tool for Emax regression in R would look like. This was what happened.", 
+  text = "A lightweight tool for Emax regression models in R, providing support for exposure-response analyses using this framework, and hooks into the erplots package for visualising results", 
   buttons = list(
     button("https://emaxnls.djnavarro.net/", "docs"),
     button("https://github.com/djnavarro/emaxnls", "repo"),
