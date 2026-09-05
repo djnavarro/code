@@ -246,6 +246,20 @@ card(
   )
 )
 
+card(
+  title = "minis", 
+  text = "A collection of small, standalone, zero-runtime-dependency R components ('minis'), each shipped as a single .R file with its own drop-in test suite. Handy when you want to include a tiny snippet of functionality in a package without taking a larger dependency.",
+  buttons = list(
+    button("https://minis.djnavarro.net", "docs"),
+    button("https://github.com/djnavarro/minis/", "repo")
+  ), 
+  url = "https://minis.djnavarro.net", 
+  image = image(
+    src = "img/minis.png", 
+    url = "https://minis.djnavarro.net", 
+    alt = "Abstract generative art"
+  )
+)
 
 card(
   title = "cranlint", 
