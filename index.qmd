@@ -246,20 +246,36 @@ card(
   )
 )
 
-# card(
-#   title = "calendario", 
-#   text = "A personal package I use to help me manage my workload. It's quirky, horrifically buggy, and unashamedly hyperfocused on what I need. I'm going through the motions of building a proper test suite, writing real documentation, etc, but I see no need to send it to CRAN. The last thing I want is other people trying to use this one.",
-#   buttons = list(
-#     button("https://calendario.djnavarro.net", "docs"),
-#     button("https://github.com/djnavarro/calendario/", "repo")
-#   ),
-#   url = "https://calendario.djnavarro.net",
-#   image = image(
-#     src = "img/calendario.png", 
-#     url = "https://calendario.djnavarro.net",
-#     alt = "Abstract generative art"
-#   )
-# )
+
+card(
+  title = "cranlint", 
+  text = "A personal package that I use to help me avoid making foolish mistakes when preparing an R package for a CRAN submission. Highly experimental, would not recommend anyone else using it.",
+  buttons = list(
+    button("https://cranlint.djnavarro.net", "docs"),
+    button("https://github.com/djnavarro/cranlint/", "repo")
+  ), 
+  url = "https://cranlint.djnavarro.net", 
+  image = image(
+    src = "img/cranlint.png", 
+    url = "https://cranlint.djnavarro.net", 
+    alt = "Abstract generative art"
+  )
+)
+
+card(
+  title = "sketchpad", 
+  text = "A lightweight drawing system build on S7 and grid. An experimental R package: I'm not sure what I want to do with it.",
+  buttons = list(
+    button("https://sketchpad.djnavarro.net", "docs"),
+    button("https://github.com/djnavarro/sketchpad/", "repo")
+  ), 
+  url = "https://sketchpad.djnavarro.net", 
+  image = image(
+    src = "img/sketchpad.png", 
+    url = "https://sketchpad.djnavarro.net", 
+    alt = "Abstract generative art"
+  )
+)
 
 card(
   title = "arttools", 
