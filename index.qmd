@@ -10,7 +10,7 @@ page-layout: full
 
 :::
 
-At various times in my life I have released code into the wild, usually on purpose. Sometimes that code is reused by other people, which does make me happy. With that in mind, here is a incomplete and idiosyncratic list of some things I've done with code. Some of it is good, some of it isn't. Life is like that.
+At various times in my life I have released code into the wild. Sometimes that code is reused by other people, which does make me happy. With that in mind, here is a incomplete and idiosyncratic list of some things I've done with code. Some of it is good, some of it isn't. Life is like that.
 
 <br>
 
