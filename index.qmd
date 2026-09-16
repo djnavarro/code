@@ -106,7 +106,7 @@ make_image <- function(src) {
 
 card(
   title = "ertte", 
-  text = "Work in progress package that provides a convenience layer for exposure-response time-to-event models", 
+  text = "Work in progress package that provides a convenience layer for exposure-response time-to-event models. Not yet on CRAN.", 
   buttons = list(
     button("https://ertte.djnavarro.net/", "docs"),
     button("https://github.com/djnavarro/ertte", "repo")
@@ -121,10 +121,11 @@ card(
 
 card(
   title = "erplots", 
-  text = "Work in progress package that provides a model agnostic plotting framework for exposure-response plots", 
+  text = "Early stage package that provides a model agnostic plotting framework for exposure-response plots. Currently at v0.1.2 on CRAN.", 
   buttons = list(
     button("https://erlots.djnavarro.net/", "docs"),
-    button("https://github.com/djnavarro/erplots", "repo")
+    button("https://github.com/djnavarro/erplots", "repo"),
+    button("https://cran.r-project.org/package=erplots", "cran")
   ),
   image = image(
     src = "img/erplots.png", 
@@ -136,7 +137,7 @@ card(
 
 card(
   title = "erglm", 
-  text = "A small package to provide a convenience layer for exposure-response models that fall within the generalized linear model, and hooks into the erplots package", 
+  text = "A small package to provide a convenience layer for exposure-response models that fall within the generalized linear model, and hooks into the erplots package. Currently at v0.1.1 on CRAN.", 
   buttons = list(
     button("https://erglm.djnavarro.net/", "docs"),
     button("https://github.com/djnavarro/erglm", "repo"),
@@ -152,7 +153,7 @@ card(
 
 card(
   title = "emaxnls", 
-  text = "A lightweight tool for Emax regression models in R, providing support for exposure-response analyses using this framework, and hooks into the erplots package for visualising results", 
+  text = "A lightweight tool for Emax regression models in R, providing support for exposure-response analyses using this framework, and hooks into the erplots package for visualising results. Currently at v0.2.0 on CRAN.", 
   buttons = list(
     button("https://emaxnls.djnavarro.net/", "docs"),
     button("https://github.com/djnavarro/emaxnls", "repo"),
@@ -168,7 +169,7 @@ card(
 
 card(
   title = "sessioncheck", 
-  text = "Simple tools for checking the state of the R session. Early-stage package, intended as a drop-in replacement for the heuristic method of using `rm()` to clear the global environment at the top of a script; aimed at intermediate-level R users that may not be ready for advanced session management tools", 
+  text = "Simple tools for checking the state of the R session. Early-stage package, intended as a drop-in replacement for the heuristic method of using `rm()` to clear the global environment at the top of a script; aimed at intermediate-level R users that may not be ready for advanced session management tools. Currently at v0.2.0 on CRAN.", 
   buttons = list(
     button("https://sessioncheck.djnavarro.net/", "docs"),
     button("https://github.com/djnavarro/sessioncheck", "repo"),
@@ -232,7 +233,7 @@ card(
 
 card(
   title = "quartose", 
-  text = "Syntactic sugar for quarto. An early-stage package providing some tools for working with quarto programmatically. It was originally a personal-use package, but people have expressed some interest in using it so I've now sent it to CRAN. I like this one enough that I intend to maintain it properly, but I suspect development will be slow given life constraints.",
+  text = "Syntactic sugar for quarto. An early-stage package providing some tools for working with quarto programmatically. It was originally a personal-use package, but people have expressed some interest in using it so I've now sent it to CRAN. I like this one enough that I intend to maintain it properly, but I suspect development will be slow given life constraints. Currently at v0.2.1 on CRAN.",
   buttons = list(
     button("https://quartose.djnavarro.net", "docs"),
     button("https://github.com/djnavarro/quartose", "repo"),
@@ -323,7 +324,7 @@ card(
 
 card(
   title = "flametree", 
-  text = "A fun R package for generative art. It makes cute little cartoon trees using iterated function systems. That's all it does, but I like it. In retrospect I don't know why I sent it to CRAN but... it's there and it's not creating problems so... cool.", 
+  text = "A fun R package for generative art. It makes cute little cartoon trees using iterated function systems. That's all it does, but I like it. In retrospect I don't know why I sent it to CRAN but... it's there and it's not creating problems so... cool. Currently at v0.2.0 on CRAN.", 
   buttons = list(
     button("https://flametree.djnavarro.net", "docs"),
     button("https://github.com/djnavarro/flametree/", "repo"),
@@ -339,7 +340,7 @@ card(
 
 card(
   title = "lsr", 
-  text = "The first R package I ever wrote, designed to suport a [statistics textbook](https://learningstatisticswithr.com/) that is a little outdated. Surprisingly it all still seems to work as intended. So that's something.", 
+  text = "The first R package I ever wrote, designed to suport a [statistics textbook](https://learningstatisticswithr.com/) that is a little outdated. Surprisingly it all still seems to work as intended. So that's something. Currently at v1.0.0 on CRAN.", 
   buttons = list(
     button("https://lsr.djnavarro.net", "docs"),
     button("https://github.com/djnavarro/lsr/", "repo"),
