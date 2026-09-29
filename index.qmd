@@ -137,7 +137,7 @@ card(
 
 card(
   title = "erglm", 
-  text = "A small package to provide a convenience layer for exposure-response models that fall within the generalized linear model, and hooks into the erplots package. Currently at v0.1.1 on CRAN.", 
+  text = "A small package to provide a convenience layer for exposure-response models that fall within the generalized linear model, and hooks into the erplots package. Currently at v0.2.0 on CRAN.", 
   buttons = list(
     button("https://erglm.djnavarro.net/", "docs"),
     button("https://github.com/djnavarro/erglm", "repo"),
