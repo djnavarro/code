@@ -121,7 +121,7 @@ card(
 
 card(
   title = "erplots", 
-  text = "Early stage package that provides a model agnostic plotting framework for exposure-response plots. Currently at v0.1.2 on CRAN.", 
+  text = "Early stage package that provides a model agnostic plotting framework for exposure-response plots. Currently at v0.2.0 on CRAN.", 
   buttons = list(
     button("https://erlots.djnavarro.net/", "docs"),
     button("https://github.com/djnavarro/erplots", "repo"),
