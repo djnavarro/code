@@ -106,10 +106,11 @@ make_image <- function(src) {
 
 card(
   title = "ertte", 
-  text = "Work in progress package that provides a convenience layer for exposure-response time-to-event models. Not yet on CRAN.", 
+  text = "Early stage package that provides a convenience layer for exposure-response time-to-event models. Currently at v0.1.1 on CRAN.", 
   buttons = list(
     button("https://ertte.djnavarro.net/", "docs"),
-    button("https://github.com/djnavarro/ertte", "repo")
+    button("https://github.com/djnavarro/ertte", "repo"),
+    button("https://cran.r-project.org/package=ertte", "cran")
   ),
   image = image(
     src = "img/ertte.png", 
